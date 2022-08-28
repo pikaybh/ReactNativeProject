@@ -1,0 +1,287 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffecfc8054e, pid=14716, tid=6260
+#
+# JRE version:  (18.0.1.1+2) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (18.0.1.1+2-6, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x2e054e]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xmx64m -Xms64m -Dorg.gradle.appname=gradlew org.gradle.wrapper.GradleWrapperMain app:installDebug -PreactNativeDevServerPort=8081
+
+Host: Intel(R) Core(TM) i5-4460  CPU @ 3.20GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 17134 (10.0.17134.2145)
+Time: Sat May  7 01:18:38 2022 대한민국 표준시 elapsed time: 0.064561 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001fcce0b4220):  JavaThread "Unknown thread" [_thread_in_vm, id=6260, stack(0x000000d9f7f00000,0x000000d9f8000000)]
+
+Stack: [0x000000d9f7f00000,0x000000d9f8000000],  sp=0x000000d9f7ffeed0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x2e054e]
+V  [jvm.dll+0x2e09c1]
+V  [jvm.dll+0x645686]
+V  [jvm.dll+0x6458b0]
+V  [jvm.dll+0x644d6b]
+V  [jvm.dll+0x6401d6]
+V  [jvm.dll+0x7c2524]
+V  [jvm.dll+0x38b801]
+V  [jvm.dll+0x7a1203]
+V  [jvm.dll+0x40d6bf]
+V  [jvm.dll+0x40f091]
+C  [jli.dll+0x526b]
+C  [ucrtbase.dll+0x1e3fe]
+C  [KERNEL32.DLL+0x14034]
+C  [ntdll.dll+0x73691]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000fabb7f2bb48e, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x00007ffed02ba301
+RSP=0x000000d9f7ffeed0, RBP=0x0000000000000001, RSI=0x0000000800a7de80, RDI=0x0000000000000000
+R8 =0x0000000000000001, R9 =0x0000000000000001, R10=0x000001fcce149650, R11=0x0000000000000246
+R12=0x0000000000000001, R13=0x000001fccbea4190, R14=0x0000000000000001, R15=0x00007ffecfff7a60
+RIP=0x00007ffecfc8054e, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000d9f7ffeed0)
+0x000000d9f7ffeed0:   000000000000000e 0000000000000000
+0x000000d9f7ffeee0:   0000000000760000 00007ffed0191100
+0x000000d9f7ffeef0:   000000d9f7ffef00 000000000000000d
+0x000000d9f7ffef00:   000000d9f7fff020 0000000000000000
+0x000000d9f7ffef10:   0000fabb7f2bb40e 0000000000000002
+0x000000d9f7ffef20:   0000fabb7f2bb48e 0000000800000000
+0x000000d9f7ffef30:   0000000000000000 00007ffecfc809c1
+0x000000d9f7ffef40:   0000000000000048 0000000000000000
+0x000000d9f7ffef50:   0000000000000000 000001fcce1360c0
+0x000000d9f7ffef60:   0000000800a7de78 000000d900000001
+0x000000d9f7ffef70:   0000000000000000 0000000000000000
+0x000000d9f7ffef80:   0000000000000000 0000000000000000
+0x000000d9f7ffef90:   0000000000000000 ffffffffffffff00
+0x000000d9f7ffefa0:   000001fcce149200 00007fff2f740400
+0x000000d9f7ffefb0:   0000fabb7f2bb51e 0000000000000000
+0x000000d9f7ffefc0:   000001fccbea4190 0000000000000000 
+
+Instructions: (pc=0x00007ffecfc8054e)
+0x00007ffecfc8044e:   00 48 83 c2 0f 48 c1 ea 03 48 63 d2 e8 81 ef 35
+0x00007ffecfc8045e:   00 48 8b d8 48 85 c0 74 0b 89 38 eb 09 41 c6 04
+0x00007ffecfc8046e:   24 02 eb 22 33 db 49 83 7f 08 00 75 19 4c 63 84
+0x00007ffecfc8047e:   24 80 00 00 00 48 8d 4b 04 48 8b d5 e8 e1 ec 56
+0x00007ffecfc8048e:   00 49 89 5c 24 20 48 8b 9c 24 88 00 00 00 49 83
+0x00007ffecfc8049e:   3e 00 74 15 48 8b 54 24 28 48 8b ce e8 b1 8c dd
+0x00007ffecfc804ae:   ff 49 8b ce e8 89 8c dd ff 48 89 5e 20 48 8b 5c
+0x00007ffecfc804be:   24 70 4c 89 76 10 4c 89 6e 18 48 83 c4 30 41 5f
+0x00007ffecfc804ce:   41 5e 41 5d 41 5c 5f 5e 5d c3 cc cc cc cc cc cc
+0x00007ffecfc804de:   cc cc 40 53 48 83 ec 20 48 8b d9 e8 22 3c 36 00
+0x00007ffecfc804ee:   48 8b 53 28 48 ff ca 48 03 d0 48 ff c8 48 f7 d0
+0x00007ffecfc804fe:   48 23 c2 48 83 c4 20 5b c3 cc cc cc cc cc cc cc
+0x00007ffecfc8050e:   cc cc 48 89 5c 24 10 48 89 6c 24 18 48 89 74 24
+0x00007ffecfc8051e:   20 57 48 83 ec 60 48 8b 05 6d 7b 81 00 48 33 c4
+0x00007ffecfc8052e:   48 89 44 24 50 80 3d 65 12 7e 00 00 0f b6 ea 48
+0x00007ffecfc8053e:   8b f1 74 17 80 39 00 75 12 48 8b 0d 12 6e 84 00
+0x00007ffecfc8054e:   48 8b 01 ff 50 20 48 8b d8 eb 08 48 8b 59 18 48
+0x00007ffecfc8055e:   83 c3 04 48 83 3d 27 6f 84 00 00 40 b7 01 74 0f
+0x00007ffecfc8056e:   48 8b d3 48 8d 0d 90 9a 63 00 e8 53 74 f2 ff 48
+0x00007ffecfc8057e:   8d 54 24 20 48 8b cb e8 06 6f 3b 00 85 c0 74 19
+0x00007ffecfc8058e:   40 84 ed 74 14 48 8b d3 48 8d 0d 93 9a 63 00 e8
+0x00007ffecfc8059e:   5e d2 ff ff 40 32 ff eb 7a 80 3e 03 75 20 48 8b
+0x00007ffecfc805ae:   cb e8 4c 14 3b 00 84 c0 75 69 48 8b d3 48 8d 0d
+0x00007ffecfc805be:   9e 9a 63 00 e8 39 d2 ff ff 40 32 ff eb 55 48 8b
+0x00007ffecfc805ce:   56 08 4c 8b 44 24 40 48 85 d2 74 05 49 3b d0 75
+0x00007ffecfc805de:   0b 48 63 44 24 34 48 39 46 10 74 37 40 32 ff 40
+0x00007ffecfc805ee:   38 3d 47 26 85 00 74 1c 49 3b d0 48 8d 05 80 9a
+0x00007ffecfc805fe:   63 00 48 8d 0d 91 9a 63 00 48 0f 45 c8 e8 f0 d1
+0x00007ffecfc8060e:   ff ff eb 0f 48 8b d3 48 8d 0d 94 9a 63 00 e8 df
+0x00007ffecfc8061e:   d1 ff ff 80 3d 13 26 85 00 00 74 10 40 84 ff 75
+0x00007ffecfc8062e:   0b c6 05 9b 8d 86 00 01 b0 01 eb 04 40 0f b6 c7
+0x00007ffecfc8063e:   48 8b 4c 24 50 48 33 cc e8 05 da 56 00 4c 8d 5c 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffed047d550, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001fcce0d8eb0 WorkerThread "GC Thread#0" [stack: 0x000000d9f8000000,0x000000d9f8100000] [id=12632]
+  0x000001fcce0dc510 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d9f8100000,0x000000d9f8200000] [id=7304]
+  0x000001fcce0dd9d0 WorkerThread "G1 Conc#0" [stack: 0x000000d9f8200000,0x000000d9f8300000] [id=3308]
+  0x000001fcce144a10 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000d9f8300000,0x000000d9f8400000] [id=632]
+  0x000001fcce1450d0 ConcurrentGCThread "G1 Service" [stack: 0x000000d9f8400000,0x000000d9f8500000] [id=13104]
+
+=>0x000001fcce0b4220 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6260, stack(0x000000d9f7f00000,0x000000d9f8000000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000fc000000, size: 64 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+ CPUs: 4 total, 4 available
+ Memory: 8147M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 64M
+ Heap Initial Capacity: 64M
+ Heap Max Capacity: 64M
+ Pre-touch: Disabled
+ Parallel Workers: 4
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 4
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 65536K, used 0K [0x00000000fc000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffed0090cb9]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (2 events):
+Event: 0.025 Loaded shared library C:\Program Files\Java\jdk-18.0.1.1\bin\java.dll
+Event: 0.030 Loaded shared library C:\Program Files\Java\jdk-18.0.1.1\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff601b00000 - 0x00007ff601b10000 	C:\Program Files\Java\jdk-18.0.1.1\bin\java.exe
+0x00007fff32850000 - 0x00007fff32a31000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fff32600000 - 0x00007fff326b1000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fff2f7a0000 - 0x00007fff2fa13000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fff2f6a0000 - 0x00007fff2f798000 	C:\Windows\System32\ucrtbase.dll
+0x00007fff188e0000 - 0x00007fff188fa000 	C:\Program Files\Java\jdk-18.0.1.1\bin\VCRUNTIME140.dll
+0x00007fff18690000 - 0x00007fff186a8000 	C:\Program Files\Java\jdk-18.0.1.1\bin\jli.dll
+0x00007fff31380000 - 0x00007fff31421000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fff320e0000 - 0x00007fff3217e000 	C:\Windows\System32\msvcrt.dll
+0x00007fff31320000 - 0x00007fff3137b000 	C:\Windows\System32\sechost.dll
+0x00007fff31f40000 - 0x00007fff32062000 	C:\Windows\System32\RPCRT4.dll
+0x00007fff323a0000 - 0x00007fff32530000 	C:\Windows\System32\USER32.dll
+0x00007fff2f680000 - 0x00007fff2f6a0000 	C:\Windows\System32\win32u.dll
+0x00007fff2fea0000 - 0x00007fff2fec8000 	C:\Windows\System32\GDI32.dll
+0x00007fff2fa80000 - 0x00007fff2fc14000 	C:\Windows\System32\gdi32full.dll
+0x00007fff2ec00000 - 0x00007fff2ec9f000 	C:\Windows\System32\msvcp_win.dll
+0x00007fff244f0000 - 0x00007fff24759000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.2208_none_d3fb8d057c943d4a\COMCTL32.dll
+0x00007fff31430000 - 0x00007fff31752000 	C:\Windows\System32\combase.dll
+0x00007fff2eca0000 - 0x00007fff2ed19000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fff28fc0000 - 0x00007fff28fca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fff32300000 - 0x00007fff3232d000 	C:\Windows\System32\IMM32.DLL
+0x00007fff17900000 - 0x00007fff1790c000 	C:\Program Files\Java\jdk-18.0.1.1\bin\vcruntime140_1.dll
+0x00007fff000e0000 - 0x00007fff0016d000 	C:\Program Files\Java\jdk-18.0.1.1\bin\msvcp140.dll
+0x00007ffecf9a0000 - 0x00007ffed05b0000 	C:\Program Files\Java\jdk-18.0.1.1\bin\server\jvm.dll
+0x00007fff32070000 - 0x00007fff32078000 	C:\Windows\System32\PSAPI.DLL
+0x00007fff2cba0000 - 0x00007fff2cbc3000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fff22240000 - 0x00007fff22249000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fff32330000 - 0x00007fff3239c000 	C:\Windows\System32\WS2_32.dll
+0x00007fff2cb20000 - 0x00007fff2cb4a000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007fff2ef10000 - 0x00007fff2ef59000 	C:\Windows\System32\cfgmgr32.dll
+0x00007fff2eb50000 - 0x00007fff2eb61000 	C:\Windows\System32\kernel.appcore.dll
+0x00007fff16f10000 - 0x00007fff16f1a000 	C:\Program Files\Java\jdk-18.0.1.1\bin\jimage.dll
+0x00007fff21f20000 - 0x00007fff220e9000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fff21330000 - 0x00007fff21359000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fff000b0000 - 0x00007fff000d5000 	C:\Program Files\Java\jdk-18.0.1.1\bin\java.dll
+0x00007fff16df0000 - 0x00007fff16e08000 	C:\Program Files\Java\jdk-18.0.1.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-18.0.1.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.2208_none_d3fb8d057c943d4a;C:\Program Files\Java\jdk-18.0.1.1\bin\server
+
+VM Arguments:
+jvm_args: -Xmx64m -Xms64m -Dorg.gradle.appname=gradlew 
+java_command: org.gradle.wrapper.GradleWrapperMain app:installDebug -PreactNativeDevServerPort=8081
+java_class_path (initial): C:\Users\32172651\Desktop\ReactNativeProject\android\\gradle\wrapper\gradle-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 67108864                                  {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 67108864                                  {product} {command line}
+   size_t MaxNewSize                               = 39845888                                  {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 67108864                                  {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 67108864                               {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-18.0.1.1
+CLASSPATH=C:\Users\32172651\Desktop\ReactNativeProject\android\\gradle\wrapper\gradle-wrapper.jar
+PATH=C:\Users\32172651\Desktop\ReactNativeProject\android\node_modules\.bin;C:\Users\32172651\Desktop\ReactNativeProject\node_modules\.bin;C:\Users\32172651\Desktop\node_modules\.bin;C:\Users\32172651\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Program Files\nodejs;C:\Users\32172651\Desktop\ReactNativeProject\node_modules\.bin;C:\Users\32172651\Desktop\node_modules\.bin;C:\Users\32172651\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\32172651\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Users\32172651\Anaconda3\condabin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\libnvvp;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2022.1.1\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\OpenJDK\openjdk-11.0.15_10\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\32172651\AppData\Local\Microsoft\WindowsApps;C:\Users\32172651\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\32172651\AppData\Roaming\npm;C:\Users\32172651\Anaconda3;C:\Users\32172651\Anaconda3\Library;C:\Users\32172651\Anaconda3\Library\bin;C:\Users\32172651\Anaconda3\Scripts;C:\Program Files\NVIDIA Corporation\NVSMI;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\lib;C:\Program Files\Java\jdk-18.0.1.1\bin;;C:\Users\32172651\Desktop\ReactNativeProject\node_modules\.bin
+USERNAME=32172651
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 17134 (10.0.17134.2145)
+OS uptime: 0 days 13:50 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 60 stepping 3 microcode 0x28, cx8, cmov, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, fma, vzeroupper, clflush
+
+Memory: 4k page, system-wide physical 8147M (893M free)
+TotalPageFile size 16342M (AvailPageFile size 2210M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 129M, peak: 129M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (18.0.1.1+2-6) for windows-amd64 JRE (18.0.1.1+2-6), built on Apr 25 2022 21:53:15 by "mach5one" with MS VC++ 16.8 / 16.9 (VS2019)
+
+END.
